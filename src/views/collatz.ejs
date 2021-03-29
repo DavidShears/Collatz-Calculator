@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Collatz Conjecture</title>
+
+  <script src="/js/customfunctions.js"></script>
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Events -->
+  <section class="page-section" id="events">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <label for="Start">Starting Number:</label>
+          <input type="number" id="Start">
+          <button onclick="collatzcalc()">submit</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+        <textarea rows="10" id="results" readonly style="border: none"></textarea>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <script src="/js/manual/collatz-process.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "collatz-calculator",
+  "version": "1.0.0",
+  "description": "a NodeJS/IBMi implementation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidShears/Collatz-Calculator.git"
+  },
+  "author": "David Shears",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidShears/Collatz-Calculator/issues"
+  },
+  "homepage": "https://github.com/DavidShears/Collatz-Calculator#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
