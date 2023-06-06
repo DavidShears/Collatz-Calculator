@@ -1,0 +1,22 @@
+             PGM        PARM(&VALUE)
+
+             DCL        VAR(&VALUE) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&RTNLIB) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&PGMWFL1) TYPE(*CHAR) LEN(10) +
+                          VALUE('RESULT')
+
+/*-------------------------------------------------------------------*/
+/* Prepare program workfiles */
+             CHKOBJ     OBJ(QTEMP/&PGMWFL1) OBJTYPE(*FILE)
+             MONMSG     MSGID(CPF9801) EXEC(DO)
+             RTVOBJD    OBJ(&PGMWFL1) OBJTYPE(*FILE) RTNLIB(&RTNLIB)
+             CRTDUPOBJ  OBJ(&PGMWFL1) FROMLIB(&RTNLIB) OBJTYPE(*FILE) +
+                          TOLIB(QTEMP)
+             CHGPF      FILE(QTEMP/&PGMWFL1) SIZE(*NOMAX)
+             ENDDO
+             OVRDBF     FILE(&PGMWFL1) TOFILE(QTEMP/&PGMWFL1)
+             CLRPFM     FILE(QTEMP/&PGMWFL1)
+
+             CALL       PGM(CALC) PARM(&VALUE)
+
+             ENDPGM

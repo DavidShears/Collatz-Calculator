@@ -1,0 +1,4 @@
+A               R CALCR
+A                 INPUTNO       10  0       COLHDG('Number In')
+A                 OUTPUTNO      10  0       COLHDG('Number Out')
+A                 STEPNO        10  0       COLHDG('Step Number')
